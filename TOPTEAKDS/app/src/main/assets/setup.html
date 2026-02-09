@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TOPTEA KDS Setup</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body { font-family: sans-serif; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; background: #333; color: white; margin: 0; }
+        input { padding: 15px; width: 300px; margin: 10px; font-size: 16px; border-radius: 5px; border: 1px solid #ccc; }
+        button { padding: 15px 30px; background: #FF9800; border: none; color: white; font-weight: bold; cursor: pointer; border-radius: 5px; font-size: 16px; margin-top: 10px; }
+        h1 { margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <h1>TOPTEA KDS Setup</h1>
+    <p>Enter the KDS Web App URL:</p>
+    <input type="text" id="url" placeholder="http://192.168.1.100/kds" value="http://">
+    <button onclick="save()">Save & Launch</button>
+
+    <script>
+        function save() {
+            var url = document.getElementById('url').value;
+            if (url) {
+                // Call Android Bridge
+                if (window.AndroidBridge && window.AndroidBridge.saveKdsUrl) {
+                    window.AndroidBridge.saveKdsUrl(url);
+                } else {
+                    alert("Android Bridge not found!");
+                    // Fallback for testing in browser? No.
+                }
+            } else {
+                alert("Please enter a URL");
+            }
+        }
+    </script>
+</body>
+</html>

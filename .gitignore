@@ -1,0 +1,6 @@
+TOPTEAKDS/build/
+TOPTEAKDS/.gradle/
+TOPTEAKDS/app/build/
+*.iml
+.idea/
+local.properties
