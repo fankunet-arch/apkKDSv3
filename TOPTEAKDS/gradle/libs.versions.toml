@@ -14,8 +14,9 @@ mlkit-barcode = "17.2.0"
 coroutines = "1.7.3"
 gson = "2.10.1"
 webkit = "1.9.0"
-lifecycle = "2.6.2"
+lifecycle = "2.8.6"
 exifinterface = "1.3.7"
+annotationExperimental = "1.4.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -36,6 +37,7 @@ gson = { group = "com.google.code.gson", name = "gson", version.ref = "gson" }
 androidx-webkit = { group = "androidx.webkit", name = "webkit", version.ref = "webkit" }
 androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycle" }
 androidx-exifinterface = { group = "androidx.exifinterface", name = "exifinterface", version.ref = "exifinterface" }
+androidx-annotation-experimental = { group = "androidx.annotation", name = "annotation-experimental", version.ref = "annotationExperimental" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
